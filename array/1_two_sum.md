@@ -14,6 +14,7 @@ funkcja powinna zwrócić [0, 1].
 Podejście brute-force jest proste. Przejdź przez każdy element *x* i znajdź, czy istnieje inna wartość, która równa się *target - x*
 
 **Złożoność obliczeniowa**: O(n^2). Dla każdego elementu próbujemy znaleźć próbujemy znaleźć odpowienią wartość przechodząc do końća całą tablicę co ma złożoność O(n), więc końcową złożonością jest kwadratowa.
+
 **Złożoność pamięciowa**: O(1)
 
 ```python
@@ -55,6 +56,7 @@ print(two_sum_1([2, 7, 11, 15], 13))
 ```
 
 **Złożoność obliczeniowa**: O(n). Dwukrotnie przechodzimy tablicę n razy więc złożoność liniowa.
+
 **Złożoność pamięciowa**: O(n) potrzebujemy dodatkowej pamięci na słownik mapujący wartości do indeksów.
 
 ### Sposób 3: One pass Hash Table
@@ -76,5 +78,6 @@ print(two_sum_1([2, 7, 11, 15], 13))
 ```
 
 **Złożoność obliczeniowa**: O(n). Dwukrotnie przechodzimy tablicę n razy więc złożoność liniowa.
+
 **Złożoność pamięciowa**: O(n) potrzebujemy dodatkowej pamięci na słownik mapujący wartości do indeksów.
 
