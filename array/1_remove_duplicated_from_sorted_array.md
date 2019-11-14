@@ -6,12 +6,12 @@ W miejscu (in-place) znaczy, że nie można tworzyć nowej listy ani żadnej inn
 ## Przykład 1
 Mając na wejściu values = [1, 1, 2]
 
-Twoja funkcja powinna zwracać długość = 2, przy czym pierwsze dwa elementy przetworzonej listy to odpowiednio 1 i 2.
+Twoja funkcja powinna zwracać długość = 2
 
 ## Przykład 2
 Mając na wejściu values = [0,0,1,1,1,2,2,3,3,4]
 
-Twoja funkcja powinna zwracać długość = 5, przy czym pierwszych pięć elementów przetworzonej listy powino wynosić odpowiednio na 0, 1, 2, 3 i 4.
+Twoja funkcja powinna zwracać długość = 5
 
 ## Rozwiązanie
 ### Sposób 1: Dwa wskaźniki
