@@ -1,15 +1,9 @@
 def bubble_sort(numbers):
-    for index in range(1, len(numbers)):
-        # index przechowuje indeks liczby, dla której szukamy
-        # odpowiedniego miejsca
-        current_element = numbers[index]
-        j = index - 1
-        while j >= 0 and current_element < numbers[j]:
-            # print(numbers)
-            numbers[j + 1] = numbers[j]
-            j -= 1
-        numbers[j + 1] = current_element
-    return numbers
+    n = len(numbers)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if numbers[j] > numbers[j + 1]:
+                numbers[j], numbers[j + 1] = numbers[j + 1], numbers[j]
 
 
 def insertion_sort(numbers):
@@ -98,3 +92,9 @@ def quickSort(arr, low, high):
         # partition and after partition
         quickSort(arr, low, pi - 1)
         quickSort(arr, pi + 1, high)
+
+
+if __name__ == '__main__':
+    a = [3,4,5,6,1,2]
+    bubble_sort(a)
+    print(a)
