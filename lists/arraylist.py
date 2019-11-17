@@ -12,19 +12,19 @@ class List(ABC):
     def append(self, element: Any):
         pass
 
-
-class ArrayListIterator:
-    def __init__(self, array_list: 'ArrayList'):
-        self.array_list = array_list
-        self.index = 0
-
-    def __next__(self):
-        if self.index < len(self.array_list):
-            result = self.array_list[self.index]
-            self.index += 1
-            return result
-
-        raise StopIteration
+#
+# class ArrayListIterator:
+#     def __init__(self, array_list: 'ArrayList'):
+#         self.array_list = array_list
+#         self.index = 0
+#
+#     def __next__(self):
+#         if self.index < len(self.array_list):
+#             result = self.array_list[self.index]
+#             self.index += 1
+#             return result
+#
+#         raise StopIteration
 
 
 class ArrayList(List):
@@ -85,6 +85,9 @@ class ArrayList(List):
         return self.size
 
     def __getitem__(self, index):
+        if index > self.size - 1:
+            raise IndexError()
+
         return self.array[index]
 
     def __setitem__(self, index, value):
@@ -93,8 +96,8 @@ class ArrayList(List):
     def __str__(self):
         return f"[{','.join([str(self.array[i]) for i in range(self.size)])}]"
 
-    def __iter__(self):
-        return ArrayListIterator(self)
+    # def __iter__(self):
+    #     return ArrayListIterator(self)
 
     def __copy__(self):
         new_list = ArrayList()
