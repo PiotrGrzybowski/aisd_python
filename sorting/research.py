@@ -6,7 +6,7 @@ from tqdm import tqdm
 from random import shuffle
 from time import time
 
-from sorting.algorithms import insertion_sort, bubble_sort, merge_sort
+from sorting import merge_sort
 
 
 def test_durations(n, fun, name):
@@ -41,11 +41,11 @@ if __name__ == "__main__":
     # test_durations(1000, insertion_sort, "insertion")
     # test_durations(1000, bubble_sort, "bubble")
     test_durations(1000, merge_sort, "merge")
-    insertions = get_durations(1000, "insertion")
-    bubbles = get_durations(1000, "bubble")
+    # insertions = get_durations(1000, "insertion")
+    # bubbles = get_durations(1000, "bubble")
     merges = get_durations(1000, "merge")
-    x = np.arange(len(bubbles))
-    plt.plot(x, bubbles)
-    plt.plot(x, insertions)
+    # x = np.arange(len(bubbles))
+    # plt.plot(x, bubbles)
+    # plt.plot(x, insertions)
     plt.plot(x, merges)
     plt.show()

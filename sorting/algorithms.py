@@ -67,7 +67,7 @@ def partition(arr, low, high):
     for j in range(low, high):
 
         # If current element is smaller than the pivot
-        if arr[j] < pivot:
+        if arr[j] <= pivot:
             # increment index of smaller element
             i = i + 1
             arr[i], arr[j] = arr[j], arr[i]
@@ -95,6 +95,6 @@ def quickSort(arr, low, high):
 
 
 if __name__ == '__main__':
-    a = [3,4,5,6,1,2]
-    bubble_sort(a)
+    a = [3, 3, 3, 3, 3, 4, 5, 6, 1, 2]
+    quickSort(a, 0, len(a) - 1)
     print(a)
